@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Effects - toggleClass Demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  .toggler { 
+      width: 300px; 
+      height: 200px; 
+      position: relative; 
+      border: 3px dotted crimson; 
+      background-color: palegreen;
+    }
+  #button { 
+      padding: .5em 1em; 
+      text-decoration: none;
+      background-color: aquamarine; 
+    }
+  #effect {
+      position: relative;  
+      width: 240px;  
+      padding: 1em; 
+      letter-spacing: 0; 
+      font-size: 1.2em;
+      background-color: plum; 
+      border: 2px double blueviolet;  
+      color: #333;
+    }
+  .newClass { 
+      text-indent: 40px; 
+      letter-spacing: .4em; 
+      width: 410px; 
+      height: 100px; 
+      padding: 30px; 
+      margin: 10px; 
+      font-size: 1.6em; 
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#button" ).on( "click", function() {
+      $( "#effect" ).toggleClass( "newClass", 1000 );
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div class="toggler">
+  <div id="effect" class="newClass ui-corner-all">
+      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+  </div>
+</div>
+ 
+<button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+ 
+ 
+</body>
+</html>
